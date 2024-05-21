@@ -16,6 +16,12 @@ function App() {
     setoutputTemp(result.toFixed(3));
   };
 
+  // celsius to fahrenheit
+  const ctoF = (inputTemp) => {
+    const result = Number(inputTemp) + 273;
+    setoutputTemp(result.toFixed(3));
+  };
+
   return <div className="App">hello world</div>;
 }
 
