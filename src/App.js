@@ -22,6 +22,18 @@ function App() {
     setoutputTemp(result.toFixed(3));
   };
 
+  // celsius to kelvin
+  const ctoK = (inputTemp) => {
+    const result = Number(inputTemp) + 273.15;
+    setoutputTemp(result.toFixed(3));
+  };
+
+  //kelvin to celsius
+  const ktoC = (inputTemp) => {
+    const result = Number(inputTemp) - 273.15;
+    setoutputTemp(result.toFixed(3));
+  };
+
   return <div className="App">hello world</div>;
 }
 
