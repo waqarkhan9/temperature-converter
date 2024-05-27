@@ -34,6 +34,39 @@ function App() {
     setoutputTemp(result.toFixed(3));
   };
 
+  //kelvin to fahrenheit
+  const ktoF = (inputTemp) => {
+    const result = ((Number(inputTemp) - 273.15) * 9) / 5 + 32;
+    setoutputTemp(result.toFixed(3));
+  };
+
+  //handles the click of button
+  const handleChange = () => {
+    var inputTemp = document.getElementById("inputTemp");
+
+    //console.log("input temp", typeof inputTemp);
+    // console.log("input number", typeof inputNumber);
+    var unit = document.getElementById("units");
+    if (unit.value === "ftoc") {
+      ftoC(inputTemp.value);
+    }
+    if (unit.value === "ftok") {
+      ftoK(inputTemp.value);
+    }
+    if (unit.value === "ctof") {
+      ctoF(inputTemp.value);
+    }
+    if (unit.value === "ctok") {
+      ctoK(inputTemp.value);
+    }
+    if (unit.value === "ktoc") {
+      ktoC(inputTemp.value);
+    }
+    if (unit.value === "ktof") {
+      ktoF(inputTemp.value);
+    }
+  };
+
   return <div className="App">hello world</div>;
 }
 
