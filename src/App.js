@@ -66,6 +66,10 @@ function App() {
       ktoF(inputTemp.value);
     }
   };
+  const handleReset = () => {
+    setoutputTemp((outputTemp = 0));
+    document.getElementById("inputeTemp").value = "";
+  };
 
   return <div className="App">hello world</div>;
 }
