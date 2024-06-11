@@ -77,6 +77,16 @@ function App() {
       <div className="input">
         <input className="tempinput" type="number" id="inputTemp"></input>
       </div>
+      <div className="conversionlist">
+        <select className="dropdown" id="units">
+          <option value="ftoc">Fahrenheit to Celsius</option>
+          <option value="ftok">Fahrenheit to kelvin</option>
+          <option value="ctof">Celsius to Fahrenheit</option>
+          <option value="ctok">Celsius to kelvin</option>
+          <option value="ktoc">kelvin to Celsius</option>
+          <option value="ktof">kelvin to Fahrenheit</option>
+        </select>
+      </div>
     </div>
   );
 }
