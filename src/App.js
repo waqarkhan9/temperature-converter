@@ -71,7 +71,14 @@ function App() {
     document.getElementById("inputeTemp").value = "";
   };
 
-  return <div className="App">hello world</div>;
+  return (
+    <div className="App">
+      <div className="title">Temperature Converter</div>
+      <div className="input">
+        <input className="tempinput" type="number" id="inputTemp"></input>
+      </div>
+    </div>
+  );
 }
 
 export default App;
