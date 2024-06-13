@@ -8,6 +8,7 @@ function App() {
   const ftoC = (inputTemp) => {
     const result = ((inputTemp - 32) * 5) / 9;
     setoutputTemp(result.toFixed(3));
+    console.log(result);
   };
 
   //fahrenheit to kelvin
@@ -68,7 +69,7 @@ function App() {
   };
   const handleReset = () => {
     setoutputTemp((outputTemp = 0));
-    document.getElementById("inputeTemp").value = "";
+    document.getElementById("inputTemp").value = "";
   };
 
   return (
@@ -87,6 +88,10 @@ function App() {
           <option value="ktof">kelvin to Fahrenheit</option>
         </select>
       </div>
+      <div>
+        <button onClick={handleChange}>convert</button>
+      </div>
+      <div className="outputTemp"> {outputTemp}</div>
     </div>
   );
 }
